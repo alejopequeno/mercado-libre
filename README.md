@@ -17,7 +17,8 @@ Este proyecto es un clon moderno de MercadoLibre que incluye:
 ### ✅ Requisitos Cumplidos
 
 **Frontend - Items Page:**
-- ✅ Página de detalle que imita el look & feel de MercadoLibre
+
+- ✅ Página de detalle inspirada en MercadoLibre
 - ✅ Imágenes del producto (galería con carousel)
 - ✅ Título y descripción completa
 - ✅ Precio con formato de moneda
@@ -28,6 +29,7 @@ Este proyecto es un clon moderno de MercadoLibre que incluye:
 - ✅ Stack moderno: Next.js 16 + React 19
 
 **Backend - API Development:**
+
 - ✅ RESTful API con endpoints documentados
 - ✅ Endpoint para obtener lista de productos: `GET /api/products`
 - ✅ Endpoint para obtener detalle de producto: `GET /api/products/:id`
@@ -38,6 +40,7 @@ Este proyecto es un clon moderno de MercadoLibre que incluye:
 - ✅ **100% code coverage** (supera el 80% requerido)
 
 **Documentación:**
+
 - ✅ Documento de diseño: `/docs/DESIGN-DECISIONS.md`
 - ✅ Explicación de decisiones técnicas
 - ✅ Desafíos enfrentados y soluciones
@@ -49,6 +52,7 @@ Este proyecto es un clon moderno de MercadoLibre que incluye:
 Este proyecto va mucho más allá de los requisitos mínimos:
 
 **Frontend Extras:**
+
 - ⭐ **Sistema completo de variantes dinámicas** (color, talla, memoria) con sincronización de URL
 - ⭐ **Página de listado de productos** (Home) con grid responsive
 - ⭐ **TanStack Query** para cache inteligente y optimistic updates
@@ -65,6 +69,7 @@ Este proyecto va mucho más allá de los requisitos mínimos:
 - ⭐ **Stock indicators** dinámicos
 
 **Backend Extras:**
+
 - ⭐ **Arquitectura en 3 capas** (Controller → Service → Repository)
 - ⭐ **100% test coverage** (supera el 80%) con tests unitarios e integración
 - ⭐ **Validación con Zod** en runtime (además de TypeScript)
@@ -78,6 +83,7 @@ Este proyecto va mucho más allá de los requisitos mínimos:
 - ⭐ **Environment variables** management
 
 **DevEx & Code Quality:**
+
 - ⭐ Código limpio y bien organizado
 - ⭐ Componentes reutilizables y modulares
 - ⭐ Custom hooks para lógica compartida
@@ -90,11 +96,13 @@ Este proyecto va mucho más allá de los requisitos mínimos:
 ### Screenshots
 
 **Página Principal - Listado de Productos**
+
 - Grid responsive con cards de productos
 - Loading states con skeleton screens
 - Lazy loading de imágenes optimizadas
 
 **Página de Detalle de Producto**
+
 - Galería de imágenes con carousel
 - Sistema de variantes dinámicas (color, talla, etc.)
 - Precio y stock actualizados en tiempo real
@@ -104,6 +112,7 @@ Este proyecto va mucho más allá de los requisitos mínimos:
 ## Stack Tecnológico
 
 ### Frontend
+
 - **Next.js 16** - Framework React con App Router y React Server Components
 - **React 19** - Última versión con concurrent features
 - **TypeScript** - Type safety en todo el código
@@ -117,6 +126,7 @@ Este proyecto va mucho más allá de los requisitos mínimos:
 - **date-fns** - Manejo de fechas
 
 ### Backend
+
 - **Express** - Framework web minimalista y rápido
 - **TypeScript** - Type safety y mejor DX
 - **Zod** - Validación de schemas en runtime
@@ -128,6 +138,7 @@ Este proyecto va mucho más allá de los requisitos mínimos:
 ## Características Principales
 
 ### Frontend Features
+
 - ✅ Next.js 16 App Router con React Server Components
 - ✅ Sistema dinámico de variantes de productos (color, talla, memoria)
 - ✅ TanStack Query para cache y optimistic updates
@@ -140,6 +151,7 @@ Este proyecto va mucho más allá de los requisitos mínimos:
 - ✅ Componentes reutilizables con shadcn/ui
 
 ### Backend Features
+
 - ✅ Arquitectura en 3 capas (Controller → Service → Repository)
 - ✅ Validación con Zod en todos los endpoints
 - ✅ Error handling centralizado con middleware
@@ -152,6 +164,7 @@ Este proyecto va mucho más allá de los requisitos mínimos:
 ## Instalación y Setup
 
 ### Prerequisitos
+
 - **Node.js** >= 18.x
 - **pnpm** >= 8.x (recomendado) o npm
 
@@ -165,12 +178,14 @@ cd mercadoLibre
 ### 2. Instalar dependencias
 
 #### Backend
+
 ```bash
 cd backend
 pnpm install
 ```
 
 #### Frontend
+
 ```bash
 cd app
 pnpm install
@@ -179,23 +194,27 @@ pnpm install
 ### 3. Configurar variables de entorno
 
 #### Backend (.env)
+
 ```bash
 cd backend
 cp .env.example .env
 ```
 
 Editar `.env`:
+
 ```bash
 PORT=3001
 NODE_ENV=development
 ```
 
 #### Frontend (.env.local)
+
 ```bash
 cd app
 ```
 
 Crear `.env.local`:
+
 ```bash
 NEXT_PUBLIC_API_URL=http://localhost:3001/api
 ```
@@ -205,6 +224,7 @@ NEXT_PUBLIC_API_URL=http://localhost:3001/api
 #### Opción A: Ejecutar ambos servicios manualmente
 
 **Terminal 1 - Backend:**
+
 ```bash
 cd backend
 pnpm dev
@@ -212,6 +232,7 @@ pnpm dev
 ```
 
 **Terminal 2 - Frontend:**
+
 ```bash
 cd app
 pnpm dev
@@ -313,9 +334,11 @@ mercadoLibre/
 ### Productos
 
 #### `GET /api/products`
+
 Obtiene la lista de todos los productos.
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -334,9 +357,11 @@ Obtiene la lista de todos los productos.
 ```
 
 #### `GET /api/products/:id`
+
 Obtiene los detalles completos de un producto.
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -377,6 +402,7 @@ pnpm test:watch
 ```
 
 **Tipos de tests incluidos:**
+
 - Tests Unitarios: Services, utils, middleware
 - Tests de Integración: Controllers, routes, API endpoints
 - Mocks: File system, dependencias externas
@@ -395,6 +421,7 @@ const { currentImages } = useProductImages(product, selectedVariant);
 ```
 
 **Características:**
+
 - Estado sincronizado con URL (compartir link mantiene selección)
 - Actualización de precio/stock en tiempo real
 - Validación de combinaciones disponibles
@@ -406,13 +433,14 @@ TanStack Query para manejo eficiente del server state:
 
 ```typescript
 const { data, isLoading, error } = useQuery({
-  queryKey: ['product', id],
+  queryKey: ["product", id],
   queryFn: () => productService.getProductById(id),
   staleTime: 5 * 60 * 1000, // Cache por 5 minutos
 });
 ```
 
 **Beneficios:**
+
 - Cache inteligente (reduce requests al backend)
 - Retry automático en caso de error
 - Loading y error states manejados declarativamente
@@ -431,6 +459,7 @@ xl:  1280px  # Desktop grande
 ```
 
 **Adaptaciones:**
+
 - Navbar con drawer en mobile, menu horizontal en desktop
 - Product detail: 1 columna en mobile, 2 columnas en desktop
 - Imágenes: Carousel en mobile, grid en desktop
@@ -439,16 +468,19 @@ xl:  1280px  # Desktop grande
 ### 4. Arquitectura Backend en Capas
 
 **Controller Layer:**
+
 - Maneja HTTP requests/responses
 - Valida input con Zod
 - Delega lógica al service
 
 **Service Layer:**
+
 - Contiene la lógica de negocio
 - Validaciones y transformaciones
 - Orquestación entre repositories
 
 **Repository Layer:**
+
 - Abstracción del storage (JSON files)
 - Operaciones CRUD
 - Fácilmente reemplazable por DB
@@ -472,26 +504,31 @@ export async function generateMetadata({ params }) {
 ## Decisiones Técnicas
 
 ### ¿Por qué Next.js App Router?
+
 - React Server Components por defecto (mejor performance)
 - Streaming y Suspense nativos
 - Layouts anidados y loading states
 - Mejor DX con TypeScript
 
 ### ¿Por qué TanStack Query?
+
 - Estándar de la industria para server state
 - Menos boilerplate que Redux
 - Cache inteligente out of the box
 - DevTools para debugging
 
 ### ¿Por qué Express sobre NestJS?
+
 - Simplicidad y velocidad para el scope del proyecto
 - Menor overhead para una API RESTful simple
 - Mayor flexibilidad para implementar arquitectura custom
 
 ### ¿Por qué JSON en lugar de Database?
+
 El challenge requería explícitamente NO usar base de datos. El repository pattern implementado facilita migrar a DB en el futuro sin cambiar services ni controllers.
 
 ### ¿Por qué 100% test coverage en Backend?
+
 Para un proyecto de este tamaño es factible y demuestra dominio de testing patterns. En producción real se optimizaría según ROI.
 
 ## Deployment
@@ -508,6 +545,7 @@ vercel
 ```
 
 **Variables de entorno en Vercel:**
+
 ```
 NEXT_PUBLIC_API_URL=https://your-backend-api.com/api
 ```
@@ -525,6 +563,7 @@ pnpm start
 ```
 
 **Variables de entorno en producción:**
+
 ```
 PORT=3001
 NODE_ENV=production
@@ -550,6 +589,7 @@ CMD ["pnpm", "start"]
 ## Performance
 
 ### Frontend Optimizations
+
 - React.memo para componentes estáticos
 - useMemo para cálculos costosos
 - useCallback para evitar recrear funciones
@@ -558,6 +598,7 @@ CMD ["pnpm", "start"]
 - Prefetching de links
 
 ### Backend Performance
+
 - El servidor puede manejar miles de requests concurrentes
 - JSON file read es síncrono pero cacheado en memoria
 - Response time < 50ms en promedio
@@ -575,6 +616,7 @@ CMD ["pnpm", "start"]
 Si esto fuera un producto en producción:
 
 ### Backend
+
 - [ ] Base de datos (PostgreSQL/MongoDB)
 - [ ] Redis para caching
 - [ ] Rate limiting y throttling
@@ -587,6 +629,7 @@ Si esto fuera un producto en producción:
 - [ ] CI/CD pipeline
 
 ### Frontend
+
 - [ ] Tests (React Testing Library + Playwright)
 - [ ] Internacionalización (i18n)
 - [ ] Dark mode
@@ -616,6 +659,7 @@ http://localhost:3001/api-docs
 ```
 
 Incluye:
+
 - Todos los endpoints
 - Request/response schemas
 - Ejemplos de uso
@@ -624,6 +668,7 @@ Incluye:
 ## Troubleshooting
 
 ### El backend no inicia
+
 ```bash
 # Verificar que el puerto 3001 no esté en uso
 lsof -i :3001
@@ -633,6 +678,7 @@ PORT=4000
 ```
 
 ### El frontend no se conecta al backend
+
 ```bash
 # Verificar que NEXT_PUBLIC_API_URL esté configurado correctamente
 # en .env.local
@@ -642,6 +688,7 @@ NEXT_PUBLIC_API_URL=http://localhost:3001/api
 ```
 
 ### Tests fallan
+
 ```bash
 cd backend
 
